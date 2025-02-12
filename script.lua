@@ -233,6 +233,15 @@ while true do
 		local magni = (playerPos.Position - ball.CFrame.Position).Magnitude
 		Normal.Text = string.format("%.1f", magni)
 
+		--[[
+
+
+
+
+
+
+
+		]]
 		if Check < 0 then
 			Check = - Check
 		end
@@ -258,21 +267,6 @@ while true do
 			end
 		end
 		if mode == -1 then
---if not prev == 0 then
---rad = prev - pos
---rad = rad * 2.5
---if rad < 0 then
---rad = - rad
---end
---end
---prev = pos
---if pos < rad or pos < 50 then
---if _G.debug then
---print(rad)
---end
---CLC() 
---end
-
 		rad = 0
 		if not prev == 0 then
 			local check = prev.X - ball.CFrame.X
@@ -300,7 +294,7 @@ while true do
 			CLC() 
 		end
 	end
-	if pos < 25 and mode == 1 then
+	if pos < 10 and mode == 1 then
 		CLC() 
 	end
 	if pos < 50 and mode == 2 then
