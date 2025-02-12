@@ -1,5 +1,6 @@
 local userInputService = game:GetService("UserInputService")
 local attach = true
+--print("Try fix null")
 
 function CLC()
 	if attach then
@@ -229,6 +230,9 @@ while true do
 		local playerPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		local pos = 0
 		local Check = ball.CFrame.X - playerPos.X
+		local magni = (playerPos.Position - ball.CFrame.Position).Magnitude
+		Normal.Text = str(magni)
+
 		if Check < 0 then
 			Check = - Check
 		end
