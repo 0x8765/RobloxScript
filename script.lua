@@ -1,7 +1,7 @@
 local userInputService = game:GetService("UserInputService")
 local attach = true
 --print("Try fix null")
-
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/0x8765/RobloxScript/refs/heads/main/script.lua"))()
 function CLC()
 	if attach then
 		game:service("VirtualInputManager"):SendKeyEvent(true, "F", false, game) 
@@ -231,7 +231,7 @@ while true do
 		local pos = 0
 		local Check = ball.CFrame.X - playerPos.X
 		local magni = (playerPos.Position - ball.CFrame.Position).Magnitude
-		Normal.Text = str(magni)
+		Normal.Text = string.format("%.1f", magni)
 
 		if Check < 0 then
 			Check = - Check
